@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Single Reviews </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static 'reviwes/singlereviews.css' %}">
+    </head>
+    <body>
+       
+        <h1> {{ review.username }} </h1>
+        <h2> {{ review.review_text }} </h2>
+        <p> {{ review.rating }} </p>
+
+        {% if Is_liked %}
+            <p> This is liked review </p>
+        {% else %}
+            <form action = "/list-reviews/liked_id" method = "POST">
+                {% csrf_token %}
+                <input type = "hidden" name = "Liked_id" value = "{{ review.id }}">
+                <button> Like </button>
+            </form>
+        {% endif %}
+    </body>
+</html>

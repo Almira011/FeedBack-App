@@ -1,0 +1,33 @@
+/* ====== Global Page Style ====== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #4b7bec, #a55eea);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* ====== Heading Style ====== */
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    animation: pop 0.6s ease-out;
+}
+
+/* ====== Animation ====== */
+@keyframes pop {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

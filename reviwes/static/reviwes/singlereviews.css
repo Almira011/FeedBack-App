@@ -1,0 +1,111 @@
+/* ------------------------------------
+   Global Reset and Typography
+------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color:#007bff;
+}
+
+/* ------------------------------------
+   Review Card Container
+------------------------------------ */
+.review-container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 40px 50px;
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.review-container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ------------------------------------
+   Username
+------------------------------------ */
+.review-container h1 {
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+
+/* ------------------------------------
+   Review Text
+------------------------------------ */
+.review-container h2 {
+    font-size: 1.15rem;
+    color: #4b5563;
+    line-height: 1.7;
+    font-weight: 400;
+    margin-bottom: 25px;
+    background-color: #f9fafb;
+    padding: 20px 25px;
+    border-radius: 12px;
+    border-left: 4px solid #3b82f6;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.02);
+}
+
+/* ------------------------------------
+   Rating
+------------------------------------ */
+.review-container p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f59e0b;
+    background-color: #fff7e6;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 6px rgba(245, 158, 11, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.review-container p:hover {
+    background-color: #fde68a;
+    transform: scale(1.05);
+}
+
+/* ------------------------------------
+   Responsive Design
+------------------------------------ */
+@media (max-width: 600px) {
+    .review-container {
+        padding: 25px 20px;
+    }
+
+    .review-container h1 {
+        font-size: 1.6rem;
+    }
+
+    .review-container h2 {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .review-container p {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
