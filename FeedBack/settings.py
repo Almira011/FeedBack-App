@@ -129,6 +129,11 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 MEDIA_URL = "/"
 MEDIA_ROOT = os.path.join(BASE_DIR)
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://feedback-app-mq2b.onrender.com',
+    # 'https://your-backend-url.onrender.com',
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
